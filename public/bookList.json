@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "semester":"First Semester",
+        "book": {
+            "book1": "Mathematics-1(65911)",
+            "book2": "Computer application(66611)",
+            "book3": "Physics-1(65912)",
+            "book4": "Electrical Engineering fundamentals(66712)",
+            "book5": "English(65712)",
+            "book6": "Physical education & life skills development",
+            "book7": "Bangla(65711)"
+        }
+    },
+    {
+        "id": 2,
+        "semester":"Second Semester",
+        "book": {
+            "book1": "Graphics Design-1(66623)",
+            "book2": "IT support System-1(66622)",
+            "book3": "Database Application(66621)",
+            "book4": "Analog Electronics(66823)",
+            "book5": "Physics-2(65922)",
+            "book6": "Mathematics-2(65921)",
+            "book7": "Communicative English(65722)"
+        }
+    },
+    {
+        "id": 3,
+        "semester":"Third semester",
+        "book": {
+            "book1": "Graphics Design-2(66633)",
+            "book2": "IT support System-2(66634)",
+            "book3": "Web Design(66632)",
+            "book4": "Programming Essential(66631)",
+            "book5": "Chemistry(65913)",
+            "book6": "Mathematics-3(65931)",
+            "book7": "Social Science(65811)"
+        }
+    },
+    {
+        "id": 4,
+        "semester": "Fourth semester",
+        "book": {
+            "book1": "Web Development(66643)",
+            "book2": "Object-Oriented Programming(66641)",
+            "book3": "Computer Peripherals(66645)",
+            "book4": "Data Structure & Algorithm(66642)",
+            "book5": "Data Communication System(66642)",
+            "book6": "The principle of Digital Electronics(66842)",
+            "book7": "Business Organization & Communication(65841)"
+        }
+    },
+    {
+        "id": 5,
+        "semester": "Fifth semester",
+        "book": {
+            "book1": "Programming in Java(66651)",
+            "book2": "Operating Systems application(66652)",
+            "book3": "Surveillance Security System(66653)",
+            "book4": "Web Development Project(66654)",
+            "book5": "Sequential Logic System(66655)",
+            "book6": "PCB Design and Circuit Making(66656)",
+            "book7": "Accounting Theory & Practice(65851)"
+        }
+    },
+    {
+        "id": 6,
+        "semester": "Six semester",
+        "book": {
+            "book1": "Database Management System(66664)",
+            "book2": "Microcontroller Application(66663)",
+            "book3": "Microprocessor & Interfacing(66662)",
+            "book4": "Principals of Software Engineering(66661)",
+            "book5": "Optional Subject(6666X)",
+            "book6": "Environmental Studies(64054)",
+            "book7": "Industrial Management(65852)"
+        }
+    },
+    {
+        "id": 7,
+        "semester": "Seven semester",
+        "book": {
+            "book1": "Cyber Security & Ethics(66675)",
+            "book2": "E‐Commerce & CMS(66674)",
+            "book3": "Apps Development Project(66673)",
+            "book4": "Network Administration & Services(66672)",
+            "book5": "System Analysis & Design(66671)",
+            "book6": "Optional Subject‐02(6667X)",
+            "book7": "Innovation & Entrepreneurship(65853)"
+        }
+    }
+]
