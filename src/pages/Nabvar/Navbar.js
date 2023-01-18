@@ -5,13 +5,13 @@ import '../Styles/styles.css'
 
 const Navbar = () => {
     const listItem=<>
-        <li className='text-lg text-white font-semibold'><Link to='/'>Home</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/about'>About</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/notice'>Notice</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/teacher'>Teachers</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/student'>Students Skill</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/book'>Book List</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/contact'>Contact</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/'>Home</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/about'>About</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/notice'>Notice</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/teacher'>Teachers</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/student'>Students Skill</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/book'>Book List</Link></li>
+        <li className='text-lg lg:text-white font-semibold'><Link to='/contact'>Contact</Link></li>
     </>
     return (
         <div className="navbar bg-color">
