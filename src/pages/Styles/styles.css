@@ -1,3 +1,9 @@
 .bg-color{
 background-image: linear-gradient(to bottom right, rgba(38, 62, 222, 0.72), rgb(92, 6, 75));
 }
+.bg-image{
+    background-image: url(../../Img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

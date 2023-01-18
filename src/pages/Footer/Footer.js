@@ -4,20 +4,20 @@ import '../Styles/styles.css'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-color text-neutral-content">
+        <footer className=" footer p-10  bg-image text-neutral-content">
             <div>
-                <span className="footer-title">Services</span>
-                <Link className="link link-hover">Branding</Link>
-                <Link className="link link-hover">Design</Link>
-                <Link className="link link-hover">Marketing</Link>
-                <Link className="link link-hover">Advertisement</Link>
+                <span className="footer-title">Menu</span>
+                <Link to='/' className="link link-hover">Home</Link>
+                <Link to='/about' className="link link-hover">About</Link>
+                <Link to='/notice' className="link link-hover">Notice</Link>
+                <Link to='/contact'className="link link-hover">Contact Us</Link>
             </div>
             <div>
-                <span className="footer-title">Company</span>
-                <Link className="link link-hover">About us</Link>
-                <Link className="link link-hover">Contact</Link>
-                <Link className="link link-hover">Jobs</Link>
-                <Link className="link link-hover">Press kit</Link>
+                <span className="footer-title">Social</span>
+                <Link className="link link-hover">Facebook</Link>
+                <Link className="link link-hover">Youtube</Link>
+                <Link className="link link-hover">Linkedin</Link>
+                <Link className="link link-hover">Twitter</Link>
             </div>
             <div>
                 <span className="footer-title">Legal</span>
