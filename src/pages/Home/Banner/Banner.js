@@ -12,7 +12,7 @@ const Banner = () => {
                         
                         textStyle={{
                             color: '#ffff',
-                            fontWeight: 700,
+                            fontWeight: 600,
                             fontSize: '60px',
                         }}
                        
@@ -23,7 +23,7 @@ const Banner = () => {
                             'Computer Technology'
                         ]}
                         multiTextDelay={1000}
-                        typeSpeed={70}
+                        typeSpeed={50}
                         multiTextLoop
                     />
                 

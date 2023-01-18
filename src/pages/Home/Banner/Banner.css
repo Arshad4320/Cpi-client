@@ -3,7 +3,9 @@
     background: rgba(0,0,0,0.5);
 } */
 
-
+.text-color{
+    color:Purple Love;
+}
 .container {
     position: relative;
     left: 0;
