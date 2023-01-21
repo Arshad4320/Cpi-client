@@ -5,23 +5,23 @@ import '../Styles/styles.css'
 
 const Navbar = () => {
     const listItem = <>
-        <li className='text-lg text-white font-semibold'><Link to='/'>Home</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/about'>About</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/notice'>Notice</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/teacher'>Teachers</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/student'>Students Skill</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/book'>Book List</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/contact'>Contact</Link></li>
-        <li className='text-lg text-white font-semibold'><Link to='/dashboard'>DashBoard</Link></li>
+        <li className='text-lg text-white hover:text-orange-400 font-semibold'><Link to='/'>Home</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/about'>About</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/notice'>Notice</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/teacher'>Teachers</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/student'>Students Skill</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/book'>Book List</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/contact'>Contact</Link></li>
+        <li className='text-lg text-white font-semibold hover:text-orange-400'><Link to='/dashboard'>DashBoard</Link></li>
     </>
     return (
-        <div className="navbar bg-color">
+        <div className="navbar bg-color ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-color rounded-b-md w-52">
                         {listItem}
                     </ul>
                 </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn  btn-success">Sign Up</button>
+                <button className="btn  btn-outline btn-primary">Sign Up</button>
             </div>
         </div>
     );

@@ -60,32 +60,32 @@ const UploadNotice = () => {
     }
     return (
         <div>
-            <h3>Upload The Notice</h3>
+            <h3 className='text-center text-4xl my-10 font-bold text-indigo-900'>Upload The Notice</h3>
             <form onSubmit={handleSubmit(handleNoticeAdd)}>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mx-5' >
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Title</span></label>
+                        <label className="label"> <span className="label-text text-xl text-gray-500">Title</span></label>
                         <textarea className="textarea textarea-primary" {...register("title", {
                             required: 'Title required'
                         })} />
                         {errors.title && <p className='text-red-500'>{errors.title.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Description</span></label>
+                        <label className="label"> <span className="label-text text-xl text-gray-500">Description</span></label>
                         <textarea className="textarea textarea-primary" {...register("description", {
                         })} />
 
                     </div>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Notice Image</span></label>
+                        <label className="label"> <span className="label-text text-xl text-gray-500">Notice Image</span></label>
                         <input type="file" className="file-input file-input-bordered file-input-primary w-full max-w-xs"  {...register("image", {
                         })} />
 
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <input className='btn btn-accent w-4/5 md:w-3/5 lg:w-2/5  mt-4 ' value="Sign Up" type="submit" />
+                    <input className='btn btn-primary w-4/5 md:w-3/5 lg:w-64  mt-4 ' value="Submit" type="submit" />
                 </div>
 
             </form>

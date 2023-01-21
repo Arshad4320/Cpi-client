@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Navbar from '../pages/Nabvar/Navbar';
-
+import '../../src/pages/Styles/styles.css'
 const DashboardLayouts = () => {
     return (
         <div>
@@ -14,11 +14,11 @@ const DashboardLayouts = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+                    <ul className="menu p-4 w-80 bg-color text-white text-xl font-semibold">
                         {
 
 
-                            <li><Link to='/dashboard'>Upload Notice</Link></li>
+                            <li className='hover:text-orange-400'><Link to='/dashboard'>Upload Notice</Link></li>
 
 
                         }

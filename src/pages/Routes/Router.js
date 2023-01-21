@@ -6,9 +6,11 @@ import UploadNotice from "../Dashboard/UploadNotice";
 import About from "../Home/About/About";
 import Home from "../Home/Home/Home";
 import Main from "../Layout/Main";
-import Notice from "../Notice/Notice";
+import NoticeRoute from "../Notice/NoticeRoute";
+// import Notice from "../Notice/Notice";
 import Student from "../Student/Student";
 import Teacher from "../Teacher/Teacher";
+import UseNotice from './../Notice/UseNotice';
 
 export const router = createBrowserRouter([
     {
@@ -25,7 +27,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/notice',
-                element: <Notice></Notice>
+                element: <UseNotice/>
             },
             {
                 path: '/contact',
@@ -43,6 +45,11 @@ export const router = createBrowserRouter([
                 path: '/book',
                 element: <BookList />
             },
+            {
+                path: '/notice/:id',
+                element:<NoticeRoute/>,
+                loader: ({ params }) => fetch(`http://localhost:5000/noticeAll/${params.id}`)
+            }
 
         ]
     },

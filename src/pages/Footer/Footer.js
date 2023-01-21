@@ -4,7 +4,7 @@ import '../Styles/styles.css'
 
 const Footer = () => {
     return (
-        <footer className=" footer p-10  bg-image text-neutral-content">
+        <footer className=" footer p-10  bg-color text-neutral-content">
             <div>
                 <span className="footer-title">Menu</span>
                 <Link to='/' className="link link-hover">Home</Link>
