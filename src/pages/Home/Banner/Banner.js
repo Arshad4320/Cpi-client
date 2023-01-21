@@ -11,7 +11,7 @@ const Banner = () => {
                     <TypeWriterEffect
                         
                         textStyle={{
-                            color: '#ffff',
+                            color: '#ADDFFF',
                             fontWeight: 600,
                             fontSize: '60px',
                         }}
