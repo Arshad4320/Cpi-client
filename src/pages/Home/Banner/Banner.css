@@ -3,34 +3,35 @@
     background: rgba(0,0,0,0.5);
 } */
 
-.text-color{
-    color:Purple Love;
+.text-color {
+    color: #0a6e99;
 }
+
 .container {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    animation: animate 16s ease-in-out infinite;
+    animation: animate 20s ease-in-out infinite;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .outer {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,0.70);
+    background: rgba(0, 0, 0, 0.60);
 }
 
 .details {
     position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 
 }
@@ -39,18 +40,36 @@
 
     0%,
     100% {
-        background-image: url(../../../Img/img.jpg);
-    }
-
-    25% {
         background-image: url(../../../Img/img2.jpg);
+
     }
 
-    50% {
+    20% {
         background-image: url(../../../Img/img3.jpg);
+
     }
 
-    75% {
-        background-image: url(../../../Img/img.jpg);
+    40% {
+        background-image: url(../../../Img/img10.jpg);
+
     }
+
+    60% {
+        background-image: url(../../../Img/img7.jpg);
+
+    }
+
+    80% {
+        background-image: url(../../../Img/img.jpg);
+
+    }
+
+    100% {
+        background-image: url(../../../Img/img5.jpg);
+
+    }
+
+
+
+
 }
