@@ -4,17 +4,18 @@ import img from '../../../src/Img/logo.png'
 import '../Styles/styles.css'
 
 const Navbar = () => {
-    const listItem=<>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/'>Home</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/about'>About</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/notice'>Notice</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/teacher'>Teachers</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/student'>Students Skill</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/book'>Book List</Link></li>
-        <li className='text-lg lg:text-white font-semibold'><Link to='/contact'>Contact</Link></li>
+    const listItem = <>
+        <li className='text-lg text-white font-semibold'><Link to='/'>Home</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/about'>About</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/notice'>Notice</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/teacher'>Teachers</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/student'>Students Skill</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/book'>Book List</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/contact'>Contact</Link></li>
+        <li className='text-lg text-white font-semibold'><Link to='/dashboard'>DashBoard</Link></li>
     </>
     return (
-        <div className="navbar bg-color ">
+        <div className="navbar bg-color">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,12 +29,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                   {listItem}
+                    {listItem}
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/singup'> <button className="btn  btn-success">Sign Up</button></Link>
-               
+                <button className="btn  btn-success">Sign Up</button>
             </div>
         </div>
     );
