@@ -3,7 +3,7 @@ import React from 'react';
 const Notice = () => {
     return (
         <div>
-            <p>This is notice page</p>
+            <p>notice page</p>
         </div>
     );
 };
