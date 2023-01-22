@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const UploadNotice = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -13,6 +14,7 @@ const UploadNotice = () => {
 
 
     const handleNoticeAdd = data => {
+
         console.log(data);
         const image = data.image[0];
         const formData = new FormData();
@@ -49,11 +51,19 @@ const UploadNotice = () => {
                         .then(result => {
                             console.log(result);
                             if (result.acknowledged) {
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'Notice uploaded',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
 
                             }
-                        })
-                }
 
+                        })
+
+                }
 
             })
 
