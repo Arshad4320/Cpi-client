@@ -3,7 +3,7 @@ import img from '../../../Img/img4.jpg'
 const About = () => {
     return (
         <div className='mx-10' >
-            <h2 className='text-center text-5xl my-10 font-bold text-indigo-900'>About Us</h2>
+            <h2 className='text-center text-5xl my-10 font-bold font-color'>About Us</h2>
             <div className="card lg:card-side shadow-xl my-16" >
                 <img className='rounded-lg' src={img} alt="Album" />
                 <div >

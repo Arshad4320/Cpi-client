@@ -1,5 +1,12 @@
+
 .bg-color{
 background-image: linear-gradient(to bottom right, rgba(38, 62, 222, 0.72), rgb(92, 6, 75));
+}
+.font-color {
+    background: -webkit-linear-gradient(#7315c5, #47c1ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
 }
 .bg-image{
     background-image: url(../../Img/bg.jpg);

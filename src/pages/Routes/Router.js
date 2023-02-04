@@ -8,8 +8,8 @@ import About from "../Home/About/About";
 import Home from "../Home/Home/Home";
 import Main from "../Layout/Main";
 import NoticeRoute from "../Notice/NoticeRoute";
-// import Notice from "../Notice/Notice";
 import Student from "../Student/Student";
+import ChipInstructor from "../Teacher/ChipInstructor";
 import Teacher from "../Teacher/Teacher";
 import UseNotice from './../Notice/UseNotice';
 
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/teacher',
-                element: <Teacher></Teacher>
+                element: <Teacher></Teacher>,
             },
             {
                 path: '/book',
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
                 element: <NoticeRoute />,
                 loader: ({ params }) => fetch(`http://localhost:5000/noticeAll/${params.id}`)
             }
-
+        
         ]
     },
     {
