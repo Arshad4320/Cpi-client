@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Context/AuthProvidor';
 
 const InstructorData = ({ data }) => {
     const { image, name, designation, email, number } = data;
+    const { loading } = useContext(AuthContext)
+    if (loading) {
+        return <div className='flex justify-center'>
+            loading....
+        </div>
+    }
+
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl mx-5">

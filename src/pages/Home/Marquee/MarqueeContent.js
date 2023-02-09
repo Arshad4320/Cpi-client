@@ -5,7 +5,7 @@ const MarqueeContent = () => {
     return (
         <div>
             <Marquee className='bg-color text-white  text-2xl ' speed={160}>
-                Welcome to chittagong polytechnic institute
+                Welcome to chittagong polytechnic institute Department of Computer Technology
             </Marquee>
         </div>
     );

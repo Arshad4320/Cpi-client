@@ -90,7 +90,9 @@ const UploadNotice = () => {
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text text-xl text-gray-500">Notice Image</span></label>
                         <input type="file" className="file-input file-input-bordered file-input-primary w-full max-w-xs"  {...register("image", {
+                            required: 'image is required'
                         })} />
+                         {errors.image && <p className='text-red-500'>{errors.image.message}</p>}
 
                     </div>
                 </div>

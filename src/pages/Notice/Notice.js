@@ -1,10 +1,15 @@
-import React from 'react';
 import { useQuery } from 'react-query';
+import { PacmanLoader } from 'react-spinners';
+import Loading from '../../Loading/Loading';
 import NoticeData from './NoticeData';
 import NoticeTitle from './NoticeTitle';
 
 const Notice = () => {
-    const { data } = useQuery("notice", () => NoticeData())
+    const { data, isLoading } = useQuery("notice", () => NoticeData())
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className=' mx-auto p-10'>
             <h2 className='text-center text-5xl my-10 font-bold text-indigo-900'>Notice</h2>
@@ -17,6 +22,7 @@ const Notice = () => {
             </div>
         </div>
     );
+
 };
 
 export default Notice;

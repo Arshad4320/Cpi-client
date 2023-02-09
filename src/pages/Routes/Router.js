@@ -3,6 +3,7 @@ import DashboardLayouts from "../../Layouts/DashboardLayouts";
 import BookList from "../BookList/BookList";
 import Contact from "../Contact/Contact";
 import AddTeacher from "../Dashboard/AddTeacher";
+import Example from "../Dashboard/Example";
 import UploadNotice from "../Dashboard/UploadNotice";
 import About from "../Home/About/About";
 import Home from "../Home/Home/Home";
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/addteacher',
                 element: <AddTeacher></AddTeacher>
+            },
+            {
+                path: '/dashboard/example',
+                element: <Example></Example>
             },
 
                     ]
