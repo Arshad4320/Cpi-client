@@ -23,7 +23,7 @@ const JuniorInstructor = () => {
     })
 
     function handleDelete (id) {
-        const permisson = window.confirm('are you sure ,deleted seller?')
+        const permisson = window.confirm('are you sure ,deleted Teacher?')
         if (permisson) {
             fetch(`http://localhost:5000/teacher/${id}`, {
                  method: 'DELETE'
@@ -35,8 +35,8 @@ const JuniorInstructor = () => {
                     if (data.deletedCount > 0) {
                         Swal.fire({
                             position: 'center',
-                            icon: 'Deleted',
-                            title: 'Successfully',
+                            icon: 'success',
+                            title: 'Teacher delete success',
                             showConfirmButton: false,
                             timer: 1500
                           })
@@ -54,7 +54,7 @@ const JuniorInstructor = () => {
     }
     return (
         <div>
-            <h2 className='text-center text-5xl my-10 font-bold text-indigo-900 font-color'>Junior Instructor</h2>
+            <h2 className='text-center text-4xl my-10 font-bold text-indigo-900 font-color'>Junior Instructor</h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
          {
                     juniorInstructor?.map((data => <JuniorInstructorData

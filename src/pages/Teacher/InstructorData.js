@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvidor';
 import { FaArchive, FaFileArchive } from "react-icons/fa";
+import useAdmin from '../../hooks/useAdmin';
 
 const InstructorData = ({ data, handleDelete }) => {
+    const { user } = useContext(AuthContext);
+    const [isAdmin] = useAdmin(user?.email)
     const { image, name, designation, email, number, _id } = data;
     const { loading } = useContext(AuthContext)
     if (loading) {
@@ -21,7 +24,8 @@ const InstructorData = ({ data, handleDelete }) => {
                     <p className='font-semibold font-color'>{email}</p>
                     <div className='flex justify-between'>
                     <p className='font-semibold font-color'>{number}</p>
-                    <button onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                   {isAdmin && 
+                   <button title='delete teacher'  onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>}
                     </div>
 
                 </div>

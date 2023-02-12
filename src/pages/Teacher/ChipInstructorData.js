@@ -1,7 +1,12 @@
 import React from 'react';
+import { useContext } from 'react';
 import { FaArchive } from 'react-icons/fa';
+import { AuthContext } from '../../Context/AuthProvidor';
+import useAdmin from '../../hooks/useAdmin';
 
 const ChipInstructorData = ({ data,handleDelete }) => {
+    const { user } = useContext(AuthContext);
+    const [isAdmin] = useAdmin(user?.email)
     const { designation, email, image, name, number, _id} = data;
    
     return (
@@ -14,7 +19,9 @@ const ChipInstructorData = ({ data,handleDelete }) => {
                     <p className='font-color font-semibold'>{email}</p>
                     <div className='flex justify-between'>
                     <p className='font-semibold font-color'>{number}</p>
-                    <button onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                    {isAdmin &&
+                        <button title='delete teacher' onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                    }
                     </div>
 
                 </div>

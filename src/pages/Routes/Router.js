@@ -3,6 +3,7 @@ import DashboardLayouts from "../../Layouts/DashboardLayouts";
 import BookList from "../BookList/BookList";
 import Contact from "../Contact/Contact";
 import AddTeacher from "../Dashboard/AddTeacher";
+import Alluser from "../Dashboard/Alluser";
 import UploadNotice from "../Dashboard/UploadNotice";
 import About from "../Home/About/About";
 import Home from "../Home/Home/Home";
@@ -13,6 +14,7 @@ import NoticeRoute from "../Notice/NoticeRoute";
 import Student from "../Student/Student";
 import Teacher from "../Teacher/Teacher";
 import UseNotice from './../Notice/UseNotice';
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -66,7 +68,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <DashboardLayouts></DashboardLayouts>, children: [
+        element: <AdminRoute><DashboardLayouts></DashboardLayouts></AdminRoute>, children: [
             {
                 path: '/dashboard',
                 element: <UploadNotice></UploadNotice>
@@ -74,6 +76,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/addteacher',
                 element: <AddTeacher></AddTeacher>
+            },
+            {
+                path: '/dashboard/alluser',
+                element: <Alluser></Alluser>
             },
 
                     ]

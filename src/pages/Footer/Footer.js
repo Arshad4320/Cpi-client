@@ -4,7 +4,8 @@ import '../Styles/styles.css'
 
 const Footer = () => {
     return (
-        <footer className=" footer p-10  bg-color text-neutral-content">
+        <div className='bg-color text-neutral-content pb-5'>
+            <footer className=" footer p-10  ">
             <div>
                 <span className="footer-title">Menu</span>
                 <Link to='/' className="link link-hover">Home</Link>
@@ -26,6 +27,9 @@ const Footer = () => {
                 <Link className="link link-hover">Cookie policy</Link>
             </div>
         </footer>
+        <p className='text-center
+         '>Developed by Dark Web Team</p>
+        </div>
     );
 };
 

@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Navbar from '../pages/Nabvar/Navbar';
 import '../../src/pages/Styles/styles.css'
+import useAdmin from '../hooks/useAdmin';
+import { useContext } from 'react';
+import { AuthContext } from '../Context/AuthProvidor';
 const DashboardLayouts = () => {
     return (
         <div>
@@ -21,6 +24,7 @@ const DashboardLayouts = () => {
                             <>
                                 <li className='hover:text-orange-400'><Link to='/dashboard'>Upload Notice</Link></li>
                                 <li className='hover:text-orange-400'><Link to='/dashboard/addteacher'>Add Teacher</Link></li>
+                                <li className='hover:text-orange-400'><Link to='/dashboard/alluser'>All User</Link></li>
                             </>
 
 

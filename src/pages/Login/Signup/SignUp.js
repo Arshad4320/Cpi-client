@@ -1,18 +1,22 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useCallback } from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { FaGoogle } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../Context/AuthProvidor';
 import signupImage from '../../../Img/loginpage/signup.jpg'
 
 
 const SignUp = () => {
+
   const navigate = useNavigate()
-  const {createUser, user} = useContext(AuthContext)
+  const googleProvidor = new GoogleAuthProvider()
+  const {createUser, user, googleSignUp} = useContext(AuthContext)
   // const [signUpError, setSignUPError] = useState('');
   const { register, handleSubmit,reset, formState: { errors } } = useForm();
   const resetAsyncForm = useCallback(async () => {
@@ -31,21 +35,94 @@ const SignUp = () => {
       const user = result.user;
       console.log(user);
 navigate('/')
-      Swal.fire({
-        position: 'center',
-        icon: 'SignIn',
-        title: 'Successfully',
-        showConfirmButton: false,
-        timer: 1500
-      })
-
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Sigup Successfully',
+  showConfirmButton: false,
+  timer: 1500
+})
     })
     .catch(error => {
       console.log(error);
       // setSignUPError(error.message)
     })
+    const role = 'normal'
+    const userFormdata= {
+      name:  data.name,
+      password: data.password,
+      email: data.email,
+      role: role
+    }
+    console.log(userFormdata);
+
+    fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userFormdata)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                if(result.acknowledged){
+
+                }
+                else{
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                  })
+                }
+            })
+            
+            
 
   }
+  const handleWithGoogleSignIn = () => {
+    googleSignUp(googleProvidor)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+            navigate('/')
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Google Login Success',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            const googleUser = {
+              name: user.displayName,
+              email: user.email,
+              role: 'normal',
+              password: ''
+            }
+            console.log(googleUser);
+            fetch('http://localhost:5000/users', {
+              method: 'POST',
+              headers: {
+                  'content-type': 'application/json'
+              },
+              body: JSON.stringify(googleUser)
+            })
+              .then(res => res.json())
+              .then(resultgoogle => {
+                  console.log(resultgoogle);
+                  if (resultgoogle.acknowledged) {
+            
+                  }
+            
+              })            
+        })
+        .catch(error => {
+            console.log(error);
+            // setLoginError(error.message)
+        })
+}
     return (
         <div className="hero min-h-screen bg-base-200">
             
@@ -81,7 +158,9 @@ navigate('/')
                         })} className="input input-primary w-full max-w-xs" />
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
+                    <p className='mt-2 text-blue-600 text-xl'><Link to='/login' >I Have already account</Link></p>
                     <input className='btn btn-primary w-full mt-4' value="Sign Up" type="submit" />
+                    <button className='btn btn-gray-300 mt-5 w-full' onClick={handleWithGoogleSignIn}><FaGoogle></FaGoogle><span className='ml-3'> GOOGLE</span></button>
                     {/* {signUpError && <p className='text-red-600'>{signUpError}</p>} */}
                 </form>
             </div>
