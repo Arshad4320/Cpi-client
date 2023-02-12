@@ -1,7 +1,9 @@
 import React from 'react';
+import { FaArchive } from 'react-icons/fa';
 
-const ChipInstructorData = ({ data }) => {
-    const { designation, email, image, name, number } = data
+const ChipInstructorData = ({ data,handleDelete }) => {
+    const { designation, email, image, name, number, _id} = data;
+   
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl mx-5 grid grid-cols-2 py-5">
@@ -10,7 +12,10 @@ const ChipInstructorData = ({ data }) => {
                     <h2 className="card-title font-color text-2xl font-bold">{name}</h2>
                     <p className='font-color font-semibold'>{designation}</p>
                     <p className='font-color font-semibold'>{email}</p>
-                    <p className='font-color font-semibold'>{number}</p>
+                    <div className='flex justify-between'>
+                    <p className='font-semibold font-color'>{number}</p>
+                    <button onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                    </div>
 
                 </div>
             </div>

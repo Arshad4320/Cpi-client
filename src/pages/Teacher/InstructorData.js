@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvidor';
+import { FaArchive, FaFileArchive } from "react-icons/fa";
 
-const InstructorData = ({ data }) => {
-    const { image, name, designation, email, number } = data;
+const InstructorData = ({ data, handleDelete }) => {
+    const { image, name, designation, email, number, _id } = data;
     const { loading } = useContext(AuthContext)
     if (loading) {
         return <div className='flex justify-center'>
@@ -18,7 +19,10 @@ const InstructorData = ({ data }) => {
                     <h2 className="card-title text-2xl font-bold font-color">{name}</h2>
                     <p className='text-xl font-semibold font-color'>{designation}</p>
                     <p className='font-semibold font-color'>{email}</p>
+                    <div className='flex justify-between'>
                     <p className='font-semibold font-color'>{number}</p>
+                    <button onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                    </div>
 
                 </div>
             </div>
