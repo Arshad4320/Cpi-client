@@ -8,7 +8,7 @@ const GuestTeacher = () => {
     const { data: guest = [], isLoading,refetch } = useQuery({
         queryKey: ['guest'],
         queryFn: () =>
-            fetch('http://localhost:5000/addTeacher/Guest%20Teacher')
+            fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher/Guest%20Teacher')
                 .then(res =>
                     res.json()
                 )
@@ -16,7 +16,7 @@ const GuestTeacher = () => {
     function handleDelete (id) {
         const permisson = window.confirm('are you sure ,deleted Teacher?')
         if (permisson) {
-            fetch(`http://localhost:5000/teacher/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/teacher/${id}`, {
                  method: 'DELETE'
             }
             )

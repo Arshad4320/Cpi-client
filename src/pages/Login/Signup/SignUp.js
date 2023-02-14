@@ -56,7 +56,7 @@ Swal.fire({
     }
     console.log(userFormdata);
 
-    fetch('http://localhost:5000/users', {
+    fetch('https://cpi-project-server-ayakub.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -102,7 +102,7 @@ Swal.fire({
               password: ''
             }
             console.log(googleUser);
-            fetch('http://localhost:5000/users', {
+            fetch('https://cpi-project-server-ayakub.vercel.app/users', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

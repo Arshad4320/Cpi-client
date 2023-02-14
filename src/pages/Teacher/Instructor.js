@@ -11,7 +11,7 @@ const Instructor = () => {
     const { data: instructor = [], isLoading, refetch } = useQuery({
         queryKey: ['instructor'],
         queryFn: () =>
-            fetch('http://localhost:5000/addTeacher/Instructor')
+            fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher/Instructor')
                 .then(res =>
                     res.json()
                 )
@@ -19,7 +19,7 @@ const Instructor = () => {
     function handleDelete (id) {
         const permisson = window.confirm('are you sure ,deleted Teacher?')
         if (permisson) {
-            fetch(`http://localhost:5000/teacher/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/teacher/${id}`, {
                  method: 'DELETE'
             }
             )
@@ -43,7 +43,7 @@ const Instructor = () => {
 
     }
     if(isLoading){
-        return <Loading />
+        return <Loading></Loading>
     }
     return (
         <div>

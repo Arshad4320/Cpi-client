@@ -8,7 +8,7 @@ const Alluser = () => {
     const { data: allusers = [], isLoading,refetch } = useQuery({
         queryKey: ['guest'],
         queryFn: () =>
-            fetch('http://localhost:5000/alluser')
+            fetch('https://cpi-project-server-ayakub.vercel.app/alluser')
                 .then(res =>
                     res.json()
                 )
@@ -16,7 +16,7 @@ const Alluser = () => {
     const handleUpdate = (id) => {
         const permisson = window.confirm('are you sure ,Update Admin')
         if(permisson) {
-            fetch(`http://localhost:5000/usersAll/admin/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/usersAll/admin/${id}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -38,7 +38,7 @@ const Alluser = () => {
     const handleDelete =(id) => {
         const permisson = window.confirm('are you sure , delete user?')
         if(permisson) {
-            fetch(`http://localhost:5000/alluser/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/alluser/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

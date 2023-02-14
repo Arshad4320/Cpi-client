@@ -9,14 +9,14 @@ import Swal from 'sweetalert2';
 const JuniorInstructor = () => {
     // const [data,setData]=useState([])
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/addTeacher/Junior%20Instructor')
+    //     fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher/Junior%20Instructor')
     //     .then(res=>res.json())
     //     .then(data=>setData(data))
     // },[])
     const { data: juniorInstructor = [], isLoading, refetch } = useQuery({
         queryKey: ['junior'],
         queryFn: () =>
-            fetch('http://localhost:5000/addTeacher/Junior%20Instructor')
+            fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher/Junior%20Instructor')
                 .then(res =>
                     res.json()
                 )
@@ -25,7 +25,7 @@ const JuniorInstructor = () => {
     function handleDelete (id) {
         const permisson = window.confirm('are you sure ,deleted Teacher?')
         if (permisson) {
-            fetch(`http://localhost:5000/teacher/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/teacher/${id}`, {
                  method: 'DELETE'
             }
             )

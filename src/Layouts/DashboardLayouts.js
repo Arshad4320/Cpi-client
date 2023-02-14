@@ -25,6 +25,7 @@ const DashboardLayouts = () => {
                                 <li className='hover:text-orange-400'><Link to='/dashboard'>Upload Notice</Link></li>
                                 <li className='hover:text-orange-400'><Link to='/dashboard/addteacher'>Add Teacher</Link></li>
                                 <li className='hover:text-orange-400'><Link to='/dashboard/alluser'>All User</Link></li>
+                                <li className='hover:text-orange-400'><Link to='/dashboard/jobseekerlist'>Job Seeker List</Link></li>
                             </>
 
 

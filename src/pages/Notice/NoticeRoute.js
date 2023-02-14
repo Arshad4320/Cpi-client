@@ -6,9 +6,14 @@ import 'react-photo-view/dist/react-photo-view.css';
 import Swal from 'sweetalert2';
 import { FaArchive, FaDownload } from 'react-icons/fa';
 import Pdf from "react-to-pdf";
+import { useContext } from 'react';
+import { AuthContext } from '../../Context/AuthProvidor';
+import useAdmin from '../../hooks/useAdmin';
 
 const ref = React.createRef();
 const NoticeRoute = () => {
+    const { user } = useContext(AuthContext);
+    const [isAdmin] = useAdmin(user?.email)
     const data = useLoaderData();
     console.log(data);
     const { date, title, description, image,_id } = data;
@@ -16,7 +21,7 @@ const NoticeRoute = () => {
     function handleDelete (id) {
         const permisson = window.confirm('are you sure ,deleted seller?')
         if (permisson) {
-            fetch(`http://localhost:5000/noticeDelete/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/noticeDelete/${id}`, {
                  method: 'DELETE'
             }
             )
@@ -53,7 +58,8 @@ const NoticeRoute = () => {
                 <p className='mt-3 text-justify text-gray-500 xl'>{description}</p>
 
                 <div className='flex justify-evenly items-center'>
-                <button title='download notice' onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>
+                {isAdmin &&
+                    <button title='download notice' onClick={() => handleDelete(_id)} className='text-red-600 text-2xl'><FaArchive></FaArchive></button>}
                 <Pdf targetRef={ref} filename={title}>
                             {({ toPdf }) => <button className='border-0 bg-dark text-white p-2 mb-2' onClick={toPdf}>Download <FaDownload title='Download notice' className=' text-2xl mb-2 text-gray-600 text-right'></FaDownload></button>}
                         </Pdf>  

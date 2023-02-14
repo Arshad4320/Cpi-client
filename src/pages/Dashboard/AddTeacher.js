@@ -32,7 +32,7 @@ const AddTeacher = () => {
 
                     //product data added database
 
-                    fetch('http://localhost:5000/addTeacher', {
+                    fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -40,7 +40,7 @@ const UploadNotice = () => {
 
                     //product data added database
 
-                    fetch('http://localhost:5000/notice', {
+                    fetch('https://cpi-project-server-ayakub.vercel.app/notice', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

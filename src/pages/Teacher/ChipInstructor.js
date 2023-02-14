@@ -9,7 +9,7 @@ const ChipInstructor = () => {
     const { data: chiefinstructor = [], isLoading ,refetch} = useQuery({
         queryKey: ['cef'],
         queryFn: () =>
-            fetch('http://localhost:5000/addTeacher/Chief%20Instructor')
+            fetch('https://cpi-project-server-ayakub.vercel.app/addTeacher/Chief%20Instructor')
                 .then(res =>
                     res.json()
                 )
@@ -17,7 +17,7 @@ const ChipInstructor = () => {
     function handleDelete (id) {
         const permisson = window.confirm('are you sure ,deleted Teacher?')
         if (permisson) {
-            fetch(`http://localhost:5000/teacher/${id}`, {
+            fetch(`https://cpi-project-server-ayakub.vercel.app/teacher/${id}`, {
                  method: 'DELETE'
             }
             )
